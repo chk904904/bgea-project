@@ -1,11 +1,16 @@
 A landing page for BGEA.
 
 ## Development
+
 Write your components in /components folder, import them as you like, but remember to <b>import the whole section as a single component in App.js</b>.
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+!important! Install the dependencies before running your app.
 
 ### `yarn start`
 
