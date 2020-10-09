@@ -5,6 +5,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import InteractiveItem from './InteractiveItem';
 
 export default function Story() {
   const [open, setOpen] = React.useState(false);
@@ -21,7 +22,8 @@ export default function Story() {
     <div
       style={{
         height: '90vh',
-        margin: 0,
+        width: '60vw',
+        marginLeft: '17vw',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -32,6 +34,7 @@ export default function Story() {
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
         interactive item
       </Button>
+      <InteractiveItem clickAction={handleClickOpen} />
       <Dialog
         open={open}
         onClose={handleClose}
