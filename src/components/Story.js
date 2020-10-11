@@ -12,7 +12,7 @@ export default function Story() {
         }}
       >
         <Scene />
-        <div style={{ width: '30vw', float: 'right', marginRight: '5vw', marginTop: '5vw' }}>
+        <div style={{ width: '30vw', float: 'right', marginRight: '5vw', marginTop: '10vh' }}>
           <h1>One day.</h1>
           <p>
             - 60% of Black girls’ juvenile justice referrals in Allegheny County in 2018 were for “school-related”
