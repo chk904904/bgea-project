@@ -1,61 +1,30 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import InteractiveItem from './InteractiveItem';
+import Scene from './Scene';
 
 export default function Story() {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   return (
-    <div
-      style={{
-        height: '90vh',
-        width: '60vw',
-        marginLeft: '17vw',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        padding: '3rem',
-        backgroundColor: '#efeeee',
-      }}
-    >
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        interactive item
-      </Button>
-      <InteractiveItem clickAction={handleClickOpen} />
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
+    <>
+      <div
+        style={{
+          height: '90vh',
+          width: '90vw',
+          padding: '3rem',
+        }}
       >
-        <DialogTitle id="alert-dialog-title">In Allegheny county, black girls are:</DialogTitle>
-        <DialogContent>
-          <div>
-            <h1 style={{ color: '#4f0dd2' }}>13x</h1>
-          </div>
-          <DialogContentText id="alert-dialog-description">
-            more likely than white girls to be arrested by the Pittsburgh Police.
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary" autoFocus>
-            Got it
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </div>
+        <Scene />
+        <div style={{ width: '30vw', float: 'right', marginRight: '5vw', marginTop: '5vw' }}>
+          <h1>One day.</h1>
+          <p>
+            - 60% of Black girls’ juvenile justice referrals in Allegheny County in 2018 were for “school-related”
+            offenses, while for White girls just 38% of referrals were school related,17 meaning that they happened at
+            school rather than in the community.
+          </p>
+          <p>
+            - 52% of internal providers include discussions of gender identity or sexual orientation in sex education,
+            compared to 70% of external providers.
+          </p>
+        </div>
+      </div>
+    </>
   );
 }

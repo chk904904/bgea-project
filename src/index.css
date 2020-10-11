@@ -16,6 +16,11 @@ h1 {
   font-size: 5rem;
 }
 
+img {
+  display: inline-flex;
+  flex-grow: 1;
+}
+
 @keyframes move {
   from {
     transform: scale(0.9);
@@ -27,18 +32,16 @@ h1 {
 }
 
 .box {
-  margin: 50px;
   height: 100px;
   width: 100px;
   transition: all 0.2s;
-  background-color: orange;
-  border: 2px solid gray;
-  border-radius: 5px;
   animation: move 1s ease-in-out alternate infinite;
+  z-index: 3;
+  position: relative;
 }
 
 .box:hover {
-  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.4);
+  filter: drop-shadow(5px 5px 0 #e0d8f0) drop-shadow(-5px -5px 0 #e0d8f0) drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.4));
   cursor: pointer;
   animation: none;
   transform: scale(1.2);

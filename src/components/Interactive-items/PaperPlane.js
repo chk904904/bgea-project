@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { useSpring, animated } from 'react-spring';
 import useSound from 'use-sound';
-import clickSfx from '../click.wav';
-import hoverSfx from '../hover.ogg';
+import clickSfx from '../../sound/click.wav';
+import hoverSfx from '../../sound/hover.ogg';
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
 const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
-export default function InteractiveItem(props) {
+export default function Car(props) {
   const [play] = useSound(clickSfx);
   const [hover] = useSound(hoverSfx);
   const { clickAction } = props;
@@ -25,9 +25,9 @@ export default function InteractiveItem(props) {
       onClick={handleClick}
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
-      style={{ transform: AnimationProps.xys.interpolate(trans) }}
+      style={{ transform: AnimationProps.xys.interpolate(trans), top: '-70vh', left: '20vw' }}
     >
-      Interactive Item
+      <img src="./imgs/paperplane.png" alt="Paper Plane" style={{ width: 100 }} />
     </animated.div>
   );
 }
