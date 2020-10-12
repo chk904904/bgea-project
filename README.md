@@ -12,7 +12,7 @@ In the project directory, you can run:
 
 !important! Install the dependencies before running your app.
 
-### `yarn start` or `npm run start`
+### `yarn start` or `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
