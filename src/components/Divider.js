@@ -5,7 +5,7 @@ export default function Divider() {
     <div
       style={{ height: '50vh', width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}
     >
-      <h3 style={{ textAlign: 'center' }}>
+      <h3 style={{ textAlign: 'center', opacity: 0.6 }}>
         |<br />
         <br />
         The Story

@@ -7,6 +7,9 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import CloseIcon from '@material-ui/icons/Close';
+import { IconButton } from '@material-ui/core';
+import PieChart from './charts/PieChart';
 
 export default function Scene() {
   const [open, setOpen] = React.useState(false);
@@ -29,14 +32,23 @@ export default function Scene() {
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
+        maxWidth="md"
+        fullWidth
       >
-        <DialogTitle id="alert-dialog-title">In Allegheny county, black girls are:</DialogTitle>
+        <DialogTitle id="alert-dialog-title">
+          <IconButton onClick={handleClose} style={{ marginLeft: '95%' }}>
+            <CloseIcon />
+          </IconButton>
+        </DialogTitle>
+
         <DialogContent>
-          <div>
-            <h1 style={{ color: '#4f0dd2' }}>13x</h1>
-          </div>
-          <DialogContentText id="alert-dialog-description">
-            more likely than white girls to be arrested by the Pittsburgh Police.
+          <PieChart />
+          <DialogContentText id="alert-dialog-description" style={{ marginTop: -150, padding: '1rem' }}>
+            <p className="modal-title">Juvenile Justice Referral Offense Profile for Girls</p>
+            <p style={{ fontWeight: 400 }}>
+              Girls account for 27% of referrals to the U.S. juvenile justice system. Just one-third of girls’ referrals
+              are for violent (person) offenses, and most violent offense referrals are for simple assault.
+            </p>
           </DialogContentText>
         </DialogContent>
         <DialogActions>

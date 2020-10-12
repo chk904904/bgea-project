@@ -45,7 +45,15 @@ img {
 }
 
 p {
-  font-size: 18px;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+p .modal-title {
+  font-size: 2rem;
+  color: #423389;
+  font-weight: 600;
 }
 
 @keyframes move {
