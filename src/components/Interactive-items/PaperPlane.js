@@ -25,9 +25,9 @@ export default function Car(props) {
       onClick={handleClick}
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
-      style={{ transform: AnimationProps.xys.interpolate(trans), top: '-70vh', left: '20vw' }}
+      style={{ transform: AnimationProps.xys.interpolate(trans), top: '-90vh', left: '32vw' }}
     >
-      <img src="./imgs/paperplane.png" alt="Paper Plane" style={{ width: 100 }} />
+      <img src="./imgs/paperplane.png" alt="Paper Plane" style={{ width: 100, userSelect: 'none' }} />
     </animated.div>
   );
 }

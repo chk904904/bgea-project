@@ -25,9 +25,9 @@ export default function Car(props) {
       onClick={handleClick}
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
-      style={{ transform: AnimationProps.xys.interpolate(trans), top: '-45vh', left: '1vh' }}
+      style={{ transform: AnimationProps.xys.interpolate(trans), top: '-60vh', left: '7vw' }}
     >
-      <img src="./imgs/car.png" alt="Car" style={{ width: '10vw' }} />
+      <img src="./imgs/car.png" alt="Car" style={{ width: '10vw', userSelect: 'none' }} />
     </animated.div>
   );
 }

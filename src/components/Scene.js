@@ -20,8 +20,8 @@ export default function Scene() {
   };
 
   return (
-    <div style={{ float: 'left' }}>
-      <img src="./imgs/scene.png" alt="Scene" style={{ width: '50vw', marginLeft: '-5vw' }} />
+    <div style={{ display: 'block' }}>
+      <img src="./imgs/scene.png" alt="Scene" style={{ width: '70vw', marginLeft: '-5vw', userSelect: 'none' }} />
       <Car clickAction={handleClickOpen} />
       <PaperPlane clickAction={handleClickOpen} />
       <Dialog
